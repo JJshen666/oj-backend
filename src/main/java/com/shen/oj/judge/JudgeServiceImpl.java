@@ -10,7 +10,7 @@ import com.shen.oj.judge.codesandbox.model.ExecuteCodeRequest;
 import com.shen.oj.judge.codesandbox.model.ExecuteCodeResponse;
 import com.shen.oj.judge.strategy.JudgeContext;
 import com.shen.oj.model.dto.question.JudgeCase;
-import com.shen.oj.model.dto.questionsubmit.JudgeInfo;
+import com.shen.oj.judge.codesandbox.model.JudgeInfo;
 import com.shen.oj.model.entity.Question;
 import com.shen.oj.model.entity.QuestionSubmit;
 import com.shen.oj.model.enums.QuestionSubmitStatusEnum;
