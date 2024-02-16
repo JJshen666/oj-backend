@@ -10,6 +10,7 @@ import com.shen.oj.model.enums.JudgeInfoMessageEnum;
 
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 
 /**
  * Java程序判题策略
@@ -25,8 +26,8 @@ public class JavaLanguageJudgeStrategy implements JudgeStrategy {
     @Override
     public JudgeInfo doJudge(JudgeContext judgeContext) {
         JudgeInfo judgeInfo = judgeContext.getJudgeInfo();
-        Long memory = judgeInfo.getMemory();
-        Long time = judgeInfo.getTime();
+        Long memory = Optional.ofNullable(judgeInfo.getMemory()).orElse(0L);
+        Long time = Optional.ofNullable(judgeInfo.getTime()).orElse(0L);
         List<String> outputList = judgeContext.getOutputList();
         Question question = judgeContext.getQuestion();
         List<JudgeCase> judgeCaseList = judgeContext.getJudgeCaseList();
